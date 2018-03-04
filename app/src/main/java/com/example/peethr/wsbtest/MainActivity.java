@@ -64,7 +64,7 @@ public class MainActivity extends AppCompatActivity {
                     animateArrow(270f,90f);
                     expandableRelativeLayout.toggle();
 
-                    new CountDownTimer(450, 50) {
+                    new CountDownTimer(420, 50) {
                         public void onTick(long millisUntilFinished) {
                         }
 
