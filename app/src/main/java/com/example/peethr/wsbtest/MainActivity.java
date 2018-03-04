@@ -52,7 +52,7 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
 
-
+                // Animation of arrow and expanding button in dash
                 if(!ifExpanded)
                 {
                     animateArrow(90f, 270f);
@@ -64,6 +64,7 @@ public class MainActivity extends AppCompatActivity {
                     animateArrow(270f,90f);
                     expandableRelativeLayout.toggle();
 
+                    // Counter to change radius of button after expanding
                     new CountDownTimer(420, 50) {
                         public void onTick(long millisUntilFinished) {
                         }
@@ -80,7 +81,7 @@ public class MainActivity extends AppCompatActivity {
 
     }
 
-
+    // Listeners for icons in Top Menu
     private void topIconListeners() {
 
         dashTopIcon.setOnClickListener(new View.OnClickListener() {
@@ -124,6 +125,7 @@ public class MainActivity extends AppCompatActivity {
         });
     }
 
+    // Initialization of components
     private void findViews() {
         seekbar = findViewById(R.id.seekBar);
         seekbar.setEnabled(false);
@@ -146,6 +148,7 @@ public class MainActivity extends AppCompatActivity {
         dashboard = findViewById(R.id.dashboard);
     }
 
+    // Clear highlight from Top Menu
     private void clearBackgroundSelection() {
         backgroundSelectionDash.setVisibility(View.GONE);
         backgroundSelectionWsb.setVisibility(View.GONE);
@@ -153,6 +156,7 @@ public class MainActivity extends AppCompatActivity {
         backgroundSelectionInfo.setVisibility(View.GONE);
     }
 
+    // Animated underline in top menu
     private void startAnimationTopMenu(int progressToReach) {
         // will update the "progress" propriety of seekbar until it reaches progress
         ObjectAnimator animation = ObjectAnimator.ofInt(seekbar, "progress", progressToReach);
@@ -161,10 +165,11 @@ public class MainActivity extends AppCompatActivity {
         animation.start();
     }
 
+    // Animated arrow when extending button in dash
     private void animateArrow(float startPosition, float finishPosition) {
 
         ObjectAnimator animation = ObjectAnimator.ofFloat(arrowAlert, "rotation", startPosition, finishPosition);
-        animation.setDuration(500); // 0.2 second
+        animation.setDuration(500); // 0.5 second
         animation.setInterpolator(new DecelerateInterpolator());
         animation.start();
         ifExpanded = !ifExpanded;
