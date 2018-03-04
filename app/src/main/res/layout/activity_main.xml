@@ -18,225 +18,9 @@
         <android.support.constraint.ConstraintLayout
             android:id="@+id/dashboard"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content">
+            android:layout_height="wrap_content"
+            android:visibility="visible">
 
-            <ScrollView
-                android:layout_width="match_parent"
-                android:layout_height="match_parent">
-
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:orientation="vertical" />
-            </ScrollView>
-
-            <Button
-                android:id="@+id/weatherButton"
-                android:layout_width="0dp"
-                android:layout_height="0dp"
-                android:layout_marginEnd="8dp"
-                android:layout_marginStart="8dp"
-                android:layout_marginTop="24dp"
-                android:background="@drawable/weather_button"
-                android:elevation="16dp"
-                app:layout_constraintBottom_toTopOf="@+id/eventButton"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.5"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/alertInclude" />
-
-            <TextView
-                android:id="@+id/degrees"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginBottom="8dp"
-                android:layout_marginEnd="8dp"
-                android:layout_marginRight="8dp"
-                android:layout_marginTop="8dp"
-                android:elevation="17dp"
-                android:text="-8°"
-                android:textColor="@android:color/white"
-                android:textSize="40sp"
-                app:layout_constraintBottom_toBottomOf="@+id/weatherButton"
-                app:layout_constraintEnd_toEndOf="@+id/weatherButton"
-                app:layout_constraintTop_toTopOf="@+id/weatherButton" />
-
-            <TextView
-                android:id="@+id/eventTitle"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="16dp"
-                android:layout_marginStart="16dp"
-                android:layout_marginTop="8dp"
-                android:elevation="17dp"
-                android:text="Lorem ipsum"
-                android:textColor="@android:color/white"
-                android:textSize="24sp"
-                android:textStyle="bold"
-                app:layout_constraintStart_toEndOf="@+id/eventIcon"
-                app:layout_constraintTop_toTopOf="@+id/eventButton" />
-
-            <ImageView
-                android:id="@+id/arrowTip"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginBottom="8dp"
-                android:layout_marginTop="8dp"
-                android:elevation="17dp"
-                app:layout_constraintBottom_toBottomOf="@+id/tipButton"
-                app:layout_constraintEnd_toEndOf="@+id/tipButton"
-                app:layout_constraintTop_toTopOf="@+id/tipButton"
-                app:srcCompat="@drawable/ic_navigate_next_white_36dp" />
-
-            <Button
-                android:id="@+id/eventButton"
-                android:layout_width="0dp"
-                android:layout_height="0dp"
-                android:layout_marginEnd="8dp"
-                android:layout_marginStart="8dp"
-                android:layout_marginTop="16dp"
-                android:background="@drawable/event_button"
-                android:elevation="16dp"
-                app:layout_constraintBottom_toTopOf="@+id/tipButton"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.5"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/weatherButton" />
-
-            <ImageView
-                android:id="@+id/weatherIcon"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginBottom="8dp"
-                android:layout_marginLeft="24dp"
-                android:layout_marginStart="24dp"
-                android:layout_marginTop="8dp"
-                android:elevation="17dp"
-                app:layout_constraintBottom_toBottomOf="@+id/weatherButton"
-                app:layout_constraintStart_toStartOf="@+id/weatherButton"
-                app:layout_constraintTop_toTopOf="@+id/weatherButton"
-                app:srcCompat="@drawable/ic_cloud_queue_white_36dp" />
-
-            <Button
-                android:id="@+id/tipButton"
-                android:layout_width="0dp"
-                android:layout_height="0dp"
-                android:layout_marginBottom="8dp"
-                android:layout_marginEnd="8dp"
-                android:layout_marginStart="8dp"
-                android:layout_marginTop="16dp"
-                android:background="@drawable/tip_button"
-                android:elevation="16dp"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.5"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/eventButton" />
-
-            <TextView
-                android:id="@+id/weatherTitle"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="16dp"
-                android:layout_marginStart="16dp"
-                android:layout_marginTop="8dp"
-                android:elevation="17dp"
-                android:text="Gdańsk"
-                android:textColor="@android:color/white"
-                android:textSize="24sp"
-                android:textStyle="bold"
-                app:layout_constraintStart_toEndOf="@+id/weatherIcon"
-                app:layout_constraintTop_toTopOf="@+id/weatherButton" />
-
-
-            <TextView
-                android:id="@+id/weatherMessage"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_marginEnd="16dp"
-                android:layout_marginRight="8dp"
-                android:elevation="17dp"
-                android:text="Przewidywane lekkie opady. Radzimy przyowdziać coś ciepłego."
-                android:textColor="@android:color/white"
-                android:textSize="12sp"
-                app:layout_constraintBottom_toBottomOf="@+id/weatherButton"
-                app:layout_constraintEnd_toStartOf="@+id/degrees"
-                app:layout_constraintLeft_toLeftOf="@+id/weatherTitle"
-                app:layout_constraintRight_toLeftOf="@id/degrees"
-                app:layout_constraintTop_toBottomOf="@+id/weatherTitle" />
-
-            <ImageView
-                android:id="@+id/eventIcon"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginBottom="8dp"
-                android:layout_marginLeft="24dp"
-                android:layout_marginStart="24dp"
-                android:layout_marginTop="8dp"
-                android:elevation="17dp"
-                app:layout_constraintBottom_toBottomOf="@+id/eventButton"
-                app:layout_constraintStart_toStartOf="@+id/eventButton"
-                app:layout_constraintTop_toTopOf="@+id/eventButton"
-                app:srcCompat="@drawable/ic_event_white_36dp" />
-
-            <TextView
-                android:id="@+id/tipTitle"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="16dp"
-                android:layout_marginStart="16dp"
-                android:layout_marginTop="8dp"
-                android:elevation="17dp"
-                android:text="Lorem ipsum"
-                android:textColor="@android:color/white"
-                android:textSize="24sp"
-                android:textStyle="bold"
-                app:layout_constraintStart_toEndOf="@+id/tipIcon"
-                app:layout_constraintTop_toTopOf="@+id/tipButton" />
-
-            <ImageView
-                android:id="@+id/tipIcon"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginBottom="8dp"
-                android:layout_marginLeft="24dp"
-                android:layout_marginStart="24dp"
-                android:layout_marginTop="8dp"
-                android:elevation="17dp"
-                app:layout_constraintBottom_toBottomOf="@+id/tipButton"
-                app:layout_constraintStart_toStartOf="@+id/tipButton"
-                app:layout_constraintTop_toTopOf="@+id/tipButton"
-                app:srcCompat="@drawable/ic_lightbulb_outline_white_36dp" />
-
-            <TextView
-                android:id="@+id/tipMessage"
-                android:layout_width="0dp"
-                android:layout_height="0dp"
-                android:layout_marginEnd="8dp"
-                android:layout_marginRight="8dp"
-                android:layout_marginTop="8dp"
-                android:elevation="17dp"
-                android:text="Lorem ipsum dolor sit amet, consectetur adipiscing elit."
-                android:textColor="@android:color/white"
-                android:textSize="12sp"
-                app:layout_constraintBottom_toBottomOf="@+id/tipButton"
-                app:layout_constraintEnd_toStartOf="@+id/arrowTip"
-                app:layout_constraintLeft_toLeftOf="@id/tipTitle"
-                app:layout_constraintRight_toLeftOf="@id/arrowTip"
-                app:layout_constraintTop_toBottomOf="@+id/tipTitle" />
-
-            <TextView
-                android:id="@+id/eventMessage"
-                android:layout_width="0dp"
-                android:layout_height="0dp"
-                android:layout_marginTop="8dp"
-                android:elevation="17dp"
-                android:text="Lorem ipsum dolor sit amet, consectetur adipiscing elit."
-                android:textColor="@android:color/white"
-                android:textSize="12sp"
-                app:layout_constraintBottom_toBottomOf="@+id/eventButton"
-                app:layout_constraintLeft_toLeftOf="@id/eventTitle"
-                app:layout_constraintTop_toBottomOf="@+id/eventTitle" />
 
             <include
                 android:id="@+id/alertInclude"
@@ -244,9 +28,41 @@
                 android:layout_width="wrap_content"
                 android:layout_height="0dp"
                 android:layout_marginTop="8dp"
+                android:visibility="visible"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
+
+            <include
+                android:id="@+id/weatherInclude"
+                layout="@layout/weather_layout"
+                android:layout_width="wrap_content"
+                android:layout_height="0dp"
+                android:layout_marginTop="8dp"
+                android:visibility="visible"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/alertInclude" />/>
+
+            <include
+                android:id="@+id/eventInclude"
+                layout="@layout/event_layout"
+                android:layout_width="wrap_content"
+                android:layout_height="0dp"
+                android:layout_marginTop="8dp"
+                android:visibility="visible"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/weatherInclude" />
+
+            <include
+                android:id="@+id/tipInclude"
+                layout="@layout/info_layout"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="463dp"
+                android:visibility="visible"
+                app:layout_constraintTop_toTopOf="@+id/alertInclude" />
 
         </android.support.constraint.ConstraintLayout>
     </ScrollView>
@@ -289,6 +105,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginBottom="8dp"
+        android:layout_marginLeft="16dp"
         android:layout_marginStart="16dp"
         android:adjustViewBounds="true"
         android:elevation="9dp"
@@ -300,8 +117,7 @@
         app:layout_constraintEnd_toStartOf="@+id/universityTopIcon"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
-        app:srcCompat="@drawable/ic_dashboard_white_36dp"
-        android:layout_marginLeft="16dp" />
+        app:srcCompat="@drawable/ic_dashboard_white_36dp" />
 
     <ImageView
         android:id="@+id/universityTopIcon"
@@ -335,6 +151,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginEnd="16dp"
+        android:layout_marginRight="16dp"
         android:elevation="9dp"
         android:scaleX="1"
         android:scaleY="1"
@@ -342,8 +159,7 @@
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toEndOf="@+id/eventTopIcon"
         app:layout_constraintTop_toTopOf="@+id/dashTopIcon"
-        app:srcCompat="@drawable/ic_info_outline_white_36dp"
-        android:layout_marginRight="16dp" />
+        app:srcCompat="@drawable/ic_info_outline_white_36dp" />
 
 
     <ImageView
@@ -351,6 +167,7 @@
         android:layout_width="0dp"
         android:layout_height="0dp"
         android:layout_marginBottom="8dp"
+        android:layout_marginLeft="100dp"
         android:layout_marginStart="100dp"
         android:layout_marginTop="16dp"
         android:adjustViewBounds="true"
@@ -361,8 +178,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/sideMenu"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/logo_wsb_poziom"
-        android:layout_marginLeft="100dp" />
+        app:srcCompat="@drawable/logo_wsb_poziom" />
 
     <SeekBar
         android:id="@+id/seekBar"
@@ -384,6 +200,8 @@
         android:layout_height="wrap_content"
         android:layout_marginBottom="13dp"
         android:layout_marginEnd="9dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="9dp"
         android:layout_marginStart="8dp"
         android:alpha="0.3"
         android:elevation="18dp"
@@ -393,9 +211,7 @@
         app:layout_constraintBottom_toTopOf="@+id/seekBar"
         app:layout_constraintEnd_toEndOf="@+id/dashTopIcon"
         app:layout_constraintStart_toStartOf="@+id/dashTopIcon"
-        app:srcCompat="@drawable/highlight"
-        android:layout_marginRight="9dp"
-        android:layout_marginLeft="8dp" />
+        app:srcCompat="@drawable/highlight" />
 
     <ImageView
         android:id="@+id/backgroundSelectionWsb"
@@ -403,6 +219,8 @@
         android:layout_height="wrap_content"
         android:layout_marginBottom="13dp"
         android:layout_marginEnd="9dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="9dp"
         android:layout_marginStart="8dp"
         android:alpha="0.3"
         android:elevation="18dp"
@@ -412,9 +230,7 @@
         app:layout_constraintBottom_toTopOf="@+id/seekBar"
         app:layout_constraintEnd_toEndOf="@+id/universityTopIcon"
         app:layout_constraintStart_toStartOf="@+id/universityTopIcon"
-        app:srcCompat="@drawable/highlight"
-        android:layout_marginRight="9dp"
-        android:layout_marginLeft="8dp" />
+        app:srcCompat="@drawable/highlight" />
 
     <ImageView
         android:id="@+id/backgroundSelectionEvent"
@@ -422,6 +238,8 @@
         android:layout_height="wrap_content"
         android:layout_marginBottom="13dp"
         android:layout_marginEnd="9dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="9dp"
         android:layout_marginStart="8dp"
         android:alpha="0.3"
         android:elevation="18dp"
@@ -431,9 +249,7 @@
         app:layout_constraintBottom_toTopOf="@+id/seekBar"
         app:layout_constraintEnd_toEndOf="@+id/eventTopIcon"
         app:layout_constraintStart_toStartOf="@+id/eventTopIcon"
-        app:srcCompat="@drawable/highlight"
-        android:layout_marginLeft="8dp"
-        android:layout_marginRight="9dp" />
+        app:srcCompat="@drawable/highlight" />
 
     <ImageView
         android:id="@+id/backgroundSelectionInfo"
@@ -441,6 +257,8 @@
         android:layout_height="wrap_content"
         android:layout_marginBottom="13dp"
         android:layout_marginEnd="9dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="9dp"
         android:layout_marginStart="8dp"
         android:alpha="0.3"
         android:elevation="18dp"
@@ -450,9 +268,7 @@
         app:layout_constraintBottom_toTopOf="@+id/seekBar"
         app:layout_constraintEnd_toEndOf="@+id/infoTopIcon"
         app:layout_constraintStart_toStartOf="@+id/infoTopIcon"
-        app:srcCompat="@drawable/highlight"
-        android:layout_marginLeft="8dp"
-        android:layout_marginRight="9dp" />
+        app:srcCompat="@drawable/highlight" />
 
 
 </android.support.constraint.ConstraintLayout>
