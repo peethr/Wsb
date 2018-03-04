@@ -126,6 +126,7 @@ public class MainActivity extends AppCompatActivity {
 
     private void findViews() {
         seekbar = findViewById(R.id.seekBar);
+        seekbar.setEnabled(false);
 
         dashTopIcon = findViewById(R.id.dashTopIcon);
         universityTopIcon = findViewById(R.id.universityTopIcon);

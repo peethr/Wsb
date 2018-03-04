@@ -192,6 +192,7 @@
 
     <SeekBar
         android:id="@+id/seekBar"
+        android:clickable="false"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:elevation="17dp"
