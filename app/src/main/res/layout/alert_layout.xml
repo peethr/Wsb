@@ -18,7 +18,7 @@
             android:layout_marginEnd="8dp"
             android:layout_marginStart="8dp"
             android:layout_marginTop="8dp"
-            android:background="@drawable/alert_button_clicked"
+            android:background="@drawable/alert_button_unclicked"
             android:elevation="16dp"
             android:maxLines="1"
             android:minWidth="1dp"

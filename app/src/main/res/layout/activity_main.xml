@@ -16,6 +16,7 @@
         app:layout_constraintTop_toBottomOf="@id/topLogoWsbWall">
 
         <android.support.constraint.ConstraintLayout
+            android:id="@+id/dashboard"
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
 
@@ -42,7 +43,7 @@
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.5"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/include" />
+                app:layout_constraintTop_toBottomOf="@+id/alertInclude" />
 
             <TextView
                 android:id="@+id/degrees"
@@ -238,7 +239,7 @@
                 app:layout_constraintTop_toBottomOf="@+id/eventTitle" />
 
             <include
-                android:id="@+id/include"
+                android:id="@+id/alertInclude"
                 layout="@layout/expandable_button"
                 android:layout_width="wrap_content"
                 android:layout_height="0dp"
