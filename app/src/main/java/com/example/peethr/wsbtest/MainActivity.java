@@ -110,7 +110,7 @@ public class MainActivity extends AppCompatActivity {
         backgroundSelectionEvent = findViewById(R.id.backgroundSelectionEvent);
         backgroundSelectionInfo = findViewById(R.id.backgroundSelectionInfo);
 
-        alertButton = findViewById(R.id.alertButton);
+        alertButton = findViewById(R.id.newAlertButton);
 
         arrowAlert = findViewById(R.id.arrowAlert);
     }
