@@ -1,6 +1,8 @@
 package com.example.peethr.wsbtest;
 
 import android.animation.ObjectAnimator;
+import android.graphics.drawable.Drawable;
+import android.graphics.drawable.GradientDrawable;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -8,6 +10,8 @@ import android.view.animation.DecelerateInterpolator;
 import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.SeekBar;
+
+import com.github.aakira.expandablelayout.ExpandableRelativeLayout;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -27,6 +31,8 @@ public class MainActivity extends AppCompatActivity {
 
     private Button alertButton;
 
+    private ExpandableRelativeLayout expandableRelativeLayout;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -44,10 +50,17 @@ public class MainActivity extends AppCompatActivity {
                 if(!ifExpanded)
                 {
                     animateArrow(90f, 270f);
+                    expandableRelativeLayout.toggle();
+                    alertButton.setBackgroundResource(R.drawable.alert_button_clicked);
                 }
                 else {
                     animateArrow(270f,90f);
+                    expandableRelativeLayout.toggle();
+                    alertButton.setBackgroundResource(R.drawable.alert_button_unclicked);
                 }
+
+
+
 
             }
         });
@@ -113,6 +126,8 @@ public class MainActivity extends AppCompatActivity {
         alertButton = findViewById(R.id.newAlertButton);
 
         arrowAlert = findViewById(R.id.arrowAlert);
+
+        expandableRelativeLayout = findViewById(R.id.expandableLayout1);
     }
 
     private void clearBackgroundSelection() {
@@ -131,8 +146,9 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private void animateArrow(float startPosition, float finishPosition) {
+
         ObjectAnimator animation = ObjectAnimator.ofFloat(arrowAlert, "rotation", startPosition, finishPosition);
-        animation.setDuration(200); // 0.2 second
+        animation.setDuration(500); // 0.2 second
         animation.setInterpolator(new DecelerateInterpolator());
         animation.start();
         ifExpanded = !ifExpanded;
