@@ -24,7 +24,7 @@
 
             <include
                 android:id="@+id/alertInclude"
-                layout="@layout/expandable_button"
+                layout="@layout/dashboard_expandable_button"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="16dp"
@@ -35,7 +35,7 @@
 
             <include
                 android:id="@+id/weatherInclude"
-                layout="@layout/weather_layout"
+                layout="@layout/dashboard_weather_layout"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="8dp"
@@ -46,7 +46,7 @@
 
             <include
                 android:id="@+id/eventInclude"
-                layout="@layout/event_layout"
+                layout="@layout/dashboard_event_layout"
                 android:layout_width="wrap_content"
                 android:layout_height="0dp"
                 android:layout_marginTop="8dp"
@@ -57,7 +57,7 @@
 
             <include
                 android:id="@+id/tipInclude"
-                layout="@layout/info_layout"
+                layout="@layout/dashboard_info_layout"
                 android:layout_width="wrap_content"
                 android:layout_height="0dp"
                 android:layout_marginBottom="8dp"

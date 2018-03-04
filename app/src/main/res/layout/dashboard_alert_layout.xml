@@ -11,12 +11,12 @@
         android:layout_height="wrap_content">
 
         <Button
-            android:id="@+id/weatherButton"
+            android:id="@+id/newAlertButton"
             android:layout_width="0dp"
             android:layout_height="0dp"
             android:layout_marginEnd="8dp"
             android:layout_marginStart="8dp"
-            android:background="@drawable/weather_button"
+            android:background="@drawable/dashboard_alert_button_unclicked"
             android:elevation="16dp"
             android:maxLines="1"
             android:minWidth="1dp"
@@ -28,22 +28,22 @@
             app:layout_constraintVertical_bias="1.0" />
 
         <ImageView
-            android:id="@+id/weatherIcon"
+            android:id="@+id/alertIcon"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_height="0dp"
             android:layout_marginBottom="8dp"
             android:layout_marginStart="24dp"
             android:elevation="17dp"
-            android:scaleX="0.6"
-            android:scaleY="0.6"
-            app:layout_constraintBottom_toBottomOf="@+id/weatherButton"
-            app:layout_constraintStart_toStartOf="@+id/weatherButton"
-            app:layout_constraintTop_toTopOf="@+id/weatherButton"
-            app:srcCompat="@drawable/ic_cloud_queue_white_36dp"
+            android:scaleX="0.7"
+            android:scaleY="0.7"
+            app:layout_constraintBottom_toBottomOf="@+id/newAlertButton"
+            app:layout_constraintStart_toStartOf="@+id/newAlertButton"
+            app:layout_constraintTop_toTopOf="@+id/newAlertButton"
+            app:srcCompat="@drawable/ic_warning_white_36dp"
             android:layout_marginLeft="24dp" />
 
         <TextView
-            android:id="@+id/weatherTitle"
+            android:id="@+id/alertTitle"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="16dp"
@@ -53,12 +53,12 @@
             android:textColor="@android:color/white"
             android:textSize="24sp"
             android:textStyle="bold"
-            app:layout_constraintStart_toEndOf="@+id/weatherIcon"
-            app:layout_constraintTop_toTopOf="@+id/weatherButton"
+            app:layout_constraintStart_toEndOf="@+id/alertIcon"
+            app:layout_constraintTop_toTopOf="@+id/newAlertButton"
             android:layout_marginLeft="16dp" />
 
         <TextView
-            android:id="@+id/weatherMessage"
+            android:id="@+id/alertMessage"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginEnd="8dp"
@@ -68,28 +68,27 @@
             android:text="Lorem ipsum dolor sit amet, consectetur adipiscing elit."
             android:textColor="@android:color/white"
             android:textSize="12sp"
-            app:layout_constraintEnd_toStartOf="@+id/degrees"
-            app:layout_constraintLeft_toLeftOf="@+id/weatherTitle"
-            app:layout_constraintRight_toLeftOf="@id/degrees"
-            app:layout_constraintTop_toBottomOf="@+id/weatherTitle" />
+            app:layout_constraintEnd_toStartOf="@+id/arrowAlert"
+            app:layout_constraintLeft_toLeftOf="@id/alertTitle"
+            app:layout_constraintRight_toLeftOf="@id/arrowAlert"
+            app:layout_constraintTop_toBottomOf="@+id/alertTitle" />
 
 
-        <TextView
-            android:id="@+id/degrees"
+        <ImageView
+            android:id="@+id/arrowAlert"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_height="0dp"
             android:layout_marginBottom="8dp"
-            android:layout_marginEnd="16dp"
+            android:layout_marginEnd="8dp"
             android:elevation="17dp"
+            android:rotation="90"
             android:scaleX="0.8"
             android:scaleY="0.8"
-            android:text="-8°"
-            android:textColor="@android:color/white"
-            android:textSize="40sp"
-            app:layout_constraintBottom_toBottomOf="@+id/weatherButton"
-            app:layout_constraintEnd_toEndOf="@+id/weatherButton"
-            app:layout_constraintTop_toTopOf="@+id/weatherButton"
-            android:layout_marginRight="16dp" />
+            app:layout_constraintBottom_toBottomOf="@+id/newAlertButton"
+            app:layout_constraintEnd_toEndOf="@+id/newAlertButton"
+            app:layout_constraintTop_toTopOf="@+id/newAlertButton"
+            app:srcCompat="@drawable/ic_navigate_next_white_36dp"
+            android:layout_marginRight="8dp" />
 
         <android.support.constraint.Guideline
             android:id="@+id/guideline2"
@@ -97,6 +96,7 @@
             android:layout_height="wrap_content"
             android:orientation="horizontal"
             app:layout_constraintGuide_begin="118dp" />
+
 
     </android.support.constraint.ConstraintLayout>
 </android.widget.RelativeLayout>

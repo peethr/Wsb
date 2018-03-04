@@ -1,8 +1,6 @@
 package com.example.peethr.wsbtest;
 
 import android.animation.ObjectAnimator;
-import android.graphics.drawable.Drawable;
-import android.graphics.drawable.GradientDrawable;
 import android.os.CountDownTimer;
 import android.support.constraint.ConstraintLayout;
 import android.support.v7.app.AppCompatActivity;
@@ -11,32 +9,32 @@ import android.view.View;
 import android.view.animation.DecelerateInterpolator;
 import android.widget.Button;
 import android.widget.ImageView;
-import android.widget.LinearLayout;
 import android.widget.SeekBar;
 
 import com.github.aakira.expandablelayout.ExpandableRelativeLayout;
 
 public class MainActivity extends AppCompatActivity {
 
+    // variables
     private boolean ifExpanded = false;
 
+    // views
     private SeekBar seekbar;
 
     private ImageView dashTopIcon;
     private ImageView universityTopIcon;
     private ImageView eventTopIcon;
     private ImageView infoTopIcon;
-    private  ImageView backgroundSelectionDash;
-    private  ImageView backgroundSelectionWsb;
-    private  ImageView backgroundSelectionEvent;
-    private  ImageView backgroundSelectionInfo;
+    private ImageView backgroundSelectionDash;
+    private ImageView backgroundSelectionWsb;
+    private ImageView backgroundSelectionEvent;
+    private ImageView backgroundSelectionInfo;
     private ImageView arrowAlert;
 
     private Button alertButton;
 
     private ExpandableRelativeLayout expandableRelativeLayout;
     private ConstraintLayout dashboard;
-
 
 
     @Override
@@ -57,8 +55,7 @@ public class MainActivity extends AppCompatActivity {
                 {
                     animateArrow(90f, 270f);
                     expandableRelativeLayout.toggle();
-                    alertButton.setBackgroundResource(R.drawable.alert_button_clicked);
-
+                    alertButton.setBackgroundResource(R.drawable.dashboard_alert_button_clicked);
                 }
                 else {
                     animateArrow(270f,90f);
@@ -70,12 +67,10 @@ public class MainActivity extends AppCompatActivity {
                         }
 
                         public void onFinish() {
-                            alertButton.setBackgroundResource(R.drawable.alert_button_unclicked);
+                            alertButton.setBackgroundResource(R.drawable.dashboard_alert_button_unclicked);
                         }
                     }.start();
-
                 }
-
             }
         });
 

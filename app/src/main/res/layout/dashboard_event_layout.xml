@@ -11,12 +11,12 @@
         android:layout_height="wrap_content">
 
         <Button
-            android:id="@+id/tipButton"
+            android:id="@+id/eventButton"
             android:layout_width="0dp"
             android:layout_height="0dp"
             android:layout_marginEnd="8dp"
             android:layout_marginStart="8dp"
-            android:background="@drawable/tip_button"
+            android:background="@drawable/dashboard_event_button"
             android:elevation="16dp"
             android:maxLines="1"
             android:minWidth="1dp"
@@ -28,7 +28,7 @@
             app:layout_constraintVertical_bias="1.0" />
 
         <ImageView
-            android:id="@+id/tipIcon"
+            android:id="@+id/eventIcon"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginBottom="8dp"
@@ -36,14 +36,14 @@
             android:elevation="17dp"
             android:scaleX="0.6"
             android:scaleY="0.6"
-            app:layout_constraintBottom_toBottomOf="@+id/tipButton"
-            app:layout_constraintStart_toStartOf="@+id/tipButton"
-            app:layout_constraintTop_toTopOf="@+id/tipButton"
-            app:srcCompat="@drawable/ic_lightbulb_outline_white_36dp"
+            app:layout_constraintBottom_toBottomOf="@+id/eventButton"
+            app:layout_constraintStart_toStartOf="@+id/eventButton"
+            app:layout_constraintTop_toTopOf="@+id/eventButton"
+            app:srcCompat="@drawable/ic_event_white_36dp"
             android:layout_marginLeft="24dp" />
 
         <TextView
-            android:id="@+id/tipTitle"
+            android:id="@+id/eventTitle"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="16dp"
@@ -53,29 +53,28 @@
             android:textColor="@android:color/white"
             android:textSize="24sp"
             android:textStyle="bold"
-            app:layout_constraintStart_toEndOf="@+id/tipIcon"
-            app:layout_constraintTop_toTopOf="@+id/tipButton"
+            app:layout_constraintStart_toEndOf="@+id/eventIcon"
+            app:layout_constraintTop_toTopOf="@+id/eventButton"
             android:layout_marginLeft="16dp" />
 
         <TextView
-            android:id="@+id/tipMessage"
+            android:id="@+id/eventMessage"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginEnd="8dp"
             android:layout_marginRight="8dp"
-            android:layout_marginTop="8dp"
             android:elevation="17dp"
             android:text="Lorem ipsum dolor sit amet, consectetur adipiscing elit."
             android:textColor="@android:color/white"
             android:textSize="12sp"
-            app:layout_constraintEnd_toStartOf="@+id/arrowTip"
-            app:layout_constraintLeft_toLeftOf="@+id/tipTitle"
-            app:layout_constraintRight_toLeftOf="@id/arrowTip"
-            app:layout_constraintTop_toBottomOf="@+id/tipTitle" />
+            app:layout_constraintEnd_toStartOf="@+id/arrowEvent"
+            app:layout_constraintLeft_toLeftOf="@+id/eventTitle"
+            app:layout_constraintRight_toLeftOf="@id/arrowEvent"
+            app:layout_constraintTop_toBottomOf="@+id/eventTitle" />
 
 
         <ImageView
-            android:id="@+id/arrowTip"
+            android:id="@+id/arrowEvent"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginBottom="8dp"
@@ -84,9 +83,9 @@
             android:rotation="90"
             android:scaleX="0.7"
             android:scaleY="0.7"
-            app:layout_constraintBottom_toBottomOf="@+id/tipButton"
-            app:layout_constraintEnd_toEndOf="@+id/tipButton"
-            app:layout_constraintTop_toTopOf="@+id/tipButton"
+            app:layout_constraintBottom_toBottomOf="@+id/eventButton"
+            app:layout_constraintEnd_toEndOf="@+id/eventButton"
+            app:layout_constraintTop_toTopOf="@+id/eventButton"
             app:srcCompat="@drawable/ic_navigate_next_white_36dp"
             android:layout_marginRight="8dp" />
 
@@ -95,7 +94,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:orientation="horizontal"
-            app:layout_constraintGuide_begin="118dp" />
+            app:layout_constraintGuide_begin="119dp" />
 
 
     </android.support.constraint.ConstraintLayout>
